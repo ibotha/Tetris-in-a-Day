@@ -1,0 +1,17 @@
+[package]
+name = "bevy_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+strum = "0.24.1"
+strum_macros = "0.24.1"
+bevy = { version = "0.10", features = ["dynamic_linking", "mp3"] }
+rand = "0.8"
+bevy-fps-counter = "0.1.0"
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
